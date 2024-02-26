@@ -1,5 +1,3 @@
-let hours = []
-
 //object literals for shop locations: 
 
 let seattle = {
@@ -66,86 +64,14 @@ let lima = {
 
 function getRandomNumbersBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
-
 }
 
+// function to display store information on homepage
 
+// function to display store data on sales page
 
-// Function to simulate cookies purchased for each location
-function simulateCookiesPurchased(location) {
-    let hours = location.hours.split(", ");
-    for (let i = 0; i < hours.length; i++) {
-        let randomCustomers = generateRandomCustomers(location.minCustomers, location.maxCustomers);
-        let cookiesSold = Math.round(randomCustomers * location.avgSale);
-        location.averageCookiesPerHour.push({ hour: hoursArray[i], cookies: cookiesSold });
-    }
-}
+// function 
 
-// Function to display cookies purchased per hour for each location
-function displayCookiesPerHour(location) {
-    let cookiesList = document.createElement('ul');
-    let totalSales = 0;
-
-    location.averageCookiesPerHour.forEach(hourData => {
-        createListItem(cookiesList, `${hourData.hour}: ${hourData.cookies} cookies`);
-        totalSales += hourData.cookies;
-    });
-
-    createListItem(cookiesList, `Total Sales: ${totalSales} cookies`);
-
-    let container = document.createElement('div');
-    container.appendChild(document.createTextNode(`Location: ${location.name}`));
-    container.appendChild(document.createElement('br'));
-    container.appendChild(document.createTextNode("Average Cookies Per Hour:"));
-    container.appendChild(cookiesList);
-
-    document.body.appendChild(container);
-}
-
-// Function to display city information
-function displayCityInfo(location) {
-    let cityInfo = document.createElement('ul');
-    createListItem(cityInfo, `Name: ${location.name}`);
-    createListItem(cityInfo, `Phone: ${location.phone}`);
-    createListItem(cityInfo, `Location: ${location.location}`);
-    createListItem(cityInfo, `Hours: ${location.hours}`);
-    createListItem(cityInfo, `Min Customers: ${location.minCustomers}`);
-    createListItem(cityInfo, `Max Customers: ${location.maxCustomers}`);
-    createListItem(cityInfo, `Avg Sale: ${location.avgSale}`);
-
-    let container = document.createElement('div');
-    container.appendChild(cityInfo);
-
-    document.body.appendChild(container);
-}
-
-// Store customer info for each location
-storeCustomerInfo(seattle);
-storeCustomerInfo(tokyo);
-storeCustomerInfo(dubai);
-storeCustomerInfo(paris);
-storeCustomerInfo(lima);
-
-// Simulate cookies purchased for each location
-simulateCookiesPurchased(seattle);
-simulateCookiesPurchased(tokyo);
-simulateCookiesPurchased(dubai);
-simulateCookiesPurchased(paris);
-simulateCookiesPurchased(lima);
-
-// Display cookies purchased per hour for each location
-displayCookiesPerHour(seattle);
-displayCookiesPerHour(tokyo);
-displayCookiesPerHour(dubai);
-displayCookiesPerHour(paris);
-displayCookiesPerHour(lima);
-
-// Display city information for each location
-displayCityInfo(seattle);
-displayCityInfo(tokyo);
-displayCityInfo(dubai);
-displayCityInfo(paris);
-displayCityInfo(lima);
 
 
 
