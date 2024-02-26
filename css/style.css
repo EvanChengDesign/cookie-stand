@@ -8,24 +8,31 @@ header {
   font-size: 100%;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
 nav { 
   background-color: #FF8282;
   color: black;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+nav ul {
   list-style-type: none;
-  
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-  float: left;
-  margin-left: 40px;
-
+  display: inline-block; /* Display list items horizontally */
+  margin-right: 10px; /* Add margin between list items */
 }
 
 nav li a {
-  display: inline-block;
-  padding: 5px 10px;
-  
+  text-decoration: none; /* Remove underline from links */
+  color: black; /* Change link color */
 }
 
 nav li a:hover {
@@ -33,14 +40,14 @@ nav li a:hover {
 }
 
 #logo {
-  
-  
+  display: block;
+  padding: 100px;
+  border: 1px solid black; /* Thin black outline */
+  box-sizing: border-box; /* Include border in element's total width */
 }
 
 .righteous-regular {
-
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
