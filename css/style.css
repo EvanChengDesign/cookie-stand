@@ -1,6 +1,44 @@
+header {
+  background-color: #232323;
+  color: #FF8282;
+  font-family: "Righteous", sans-serif;
+  padding: 2%;
+  text-align: center;
+  font-style: italic;
+  font-size: 100%;
+}
+
+
+nav { 
+  background-color: #FF8282;
+  color: black;
+  list-style-type: none;
+  
+}
+
+nav li {
+  float: left;
+  margin-left: 40px;
+
+}
+
+nav li a {
+  display: inline-block;
+  padding: 5px 10px;
+  
+}
+
+nav li a:hover {
+  color: white;
+}
+
+#logo {
+  
+  
+}
+
 .righteous-regular {
 
-  
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-style: normal;
