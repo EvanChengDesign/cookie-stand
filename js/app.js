@@ -78,7 +78,6 @@ simulateCookiesPurchased(dubai);
 simulateCookiesPurchased(paris);
 simulateCookiesPurchased(lima);
 
-// Function tp display cookies per hour at location
 function displayCookiesPerHour(location) {
   let container = document.createElement('div');
   let title = document.createElement('h2');
@@ -86,11 +85,20 @@ function displayCookiesPerHour(location) {
   title.classList.add('city-name');
   container.appendChild(title);
   let list = document.createElement('ul');
+  let totalCookies = 0; // Variable to store the total cookies sold
+
   location.averageCookiesPerHour.forEach((cookies, index) => {
       let listItem = document.createElement('li');
       listItem.textContent = `${location.hours.split(', ')[index]}: ${cookies} cookies`;
       list.appendChild(listItem);
+      totalCookies += cookies; // Add the current hour's cookies to the total
   });
+
+  // Add the total cookies sold as the last item in the list
+  let totalListItem = document.createElement('li');
+  totalListItem.textContent = `Total Cookies Sold: ${totalCookies}`;
+  list.appendChild(totalListItem);
+
   container.appendChild(list);
   document.body.appendChild(container);
 }

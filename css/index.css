@@ -51,3 +51,12 @@ nav li a:hover {
   font-weight: 400;
   font-style: normal;
 }
+
+footer {
+  margin-top: auto; /* Push footer to the bottom */
+  background-color: #a5a5a5;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
