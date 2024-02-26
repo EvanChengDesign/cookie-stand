@@ -1,5 +1,4 @@
-//object literals for shop locations: 
-
+// Object literals for shop locations
 let seattle = {
     name: "Seattle",
     phone: "123-456-7890",
@@ -58,29 +57,82 @@ let lima = {
     maxCustomers: 16,
     avgSale: 4.6,
     averageCookiesPerHour: []
+
 }
 
-// generate random numbers 
+// Function to simulate cookies purchased
+function simulateCookiesPurchased(location) {
+    let hours = location.hours.split(', ');
+    let minCustomers = location.minCustomers;
+    let maxCustomers = location.maxCustomers;
+    let avgSale = location.avgSale;
+    hours.forEach(hour => {
+      let customers = getRandomNumberBetween(minCustomers, maxCustomers);
+      let cookiesSold = Math.round(customers * avgSale);
+      location.cookiesPurchasedPerHour.push(cookiesSold);
+    });
+  }
 
-function getRandomNumbersBetween(min, max) {
+  // Function to generate random number 
+  function getRandomNumberBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
-}
+  }
 
-// function to display store information on homepage
+  simulateCookiesPurchased(seattle);
+  simulateCookiesPurchased(tokyo);
+  simulateCookiesPurchased(dubai);
+  simulateCookiesPurchased(paris);
+  simulateCookiesPurchased(lima);
 
-// function to display store data on sales page
+  // Function tp display cookies per hour at location
+  function displayCookiesPerHour(location) {
+    let container = document.createElement('div');
+    let title = document.createElement('h2');
+    title.textContent = ${location.name};
+    title.classList.add('city-name');
+    container.appendChild(title);
+    let list = document.createElement('ul');
+    location.cookiesPurchasedPerHour.forEach((cookies, index) => {
+      let listItem = document.createElement('li');
+      listItem.textContent = ${location.hours.split(', ')[index]}: ${cookies} cookies;
+      list.appendChild(listItem);
+    });
+    container.appendChild(list);
+    document.body.appendChild(container);
+  }
 
-// function 
+  // Display results for each location
+  // displayCookiesPerHour(seattle);
+  // displayCookiesPerHour(tokyo);
+  // displayCookiesPerHour(dubai);
+  // displayCookiesPerHour(paris);
+  // displayCookiesPerHour(lima);
+  // Call the function to display city information list
+  // displayCityInfoList();
 
+  // Function to display city info
+  function displayCityInfo(location) {
+    let container = document.createElement('div');
+    let title = document.createElement('h2');
+    title.textContent = ${location.name};
+    title.classList.add('city-name');
+    container.appendChild(title);
+    let list = document.createElement('ul');
+    let hoursItem = document.createElement('li');
+    let contactInfoItem = document.createElement('li');
+    let locationItem = document.createElement('li');
 
-
-
-// display results for each location
-// displayCookiesPerHour(seattle)
-// displayCookiesPerHour(tokyo)
-// displayCookiesPerHour(dubai)
-// displayCookiesPerHour(paris)
-// displayCookiesPerHour(lima)
-
+// Combine the first and last hours to display the opening hours
+    let firstHour = location.hours.split(', ')[0];
+    let lastHour = location.hours.split(', ')[location.hours.split(', ').length - 1];
+    hoursItem.textContent = Hours Open: ${firstHour}-${lastHour};
+    contactInfoItem.textContent = Contact info: ${location.phone};
+    locationItem.textContent = Location: ${location.location};
+    list.appendChild(hoursItem);
+    list.appendChild(contactInfoItem);
+    list.appendChild(locationItem);
+    container.appendChild(list);
+    document.body.appendChild(container);
+  }
 
 
