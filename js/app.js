@@ -62,10 +62,19 @@ let lima = {
     averageCookiesPerHour: []
 }
 
+// generate random numbers 
+
+function getRandomNumbersBetween(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
+}
+
+
+
 // Function to simulate cookies purchased for each location
 function simulateCookiesPurchased(location) {
-    let hoursArray = location.hours.split(", ");
-    for (let i = 0; i < hoursArray.length; i++) {
+    let hours = location.hours.split(", ");
+    for (let i = 0; i < hours.length; i++) {
         let randomCustomers = generateRandomCustomers(location.minCustomers, location.maxCustomers);
         let cookiesSold = Math.round(randomCustomers * location.avgSale);
         location.averageCookiesPerHour.push({ hour: hoursArray[i], cookies: cookiesSold });
