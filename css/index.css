@@ -1,6 +1,6 @@
 header {
   background-color: #232323;
-  color: #FF8282;
+  color: salmon;
   font-family: "Righteous", sans-serif;
   padding: 2%;
   text-align: center;
@@ -14,7 +14,7 @@ body {
 }
 
 nav { 
-  background-color: #FF8282;
+  background-color: salmon;
   color: black;
   padding: 10px; /* Add padding for better spacing */
 }
