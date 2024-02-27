@@ -3,8 +3,16 @@
 ## Module 2 Lab
 
 ### 26 Feb 2024 | Monday
-Establish js functions, html for index and data pages, and css for styling. 
 
+Establish js functions, html for index and data pages, and css for styling.
+
+Lighthouse Score for Lab-001:
+
+![Lighthouse Score](./img/Lighthouse26FEB2024.png)
+
+### 27 Feb 2024 | Tuesday  
+
+Establish js functions to cookie
 Lighthouse Score for Lab-001:
 
 ![Lighthouse Score](./img/Lighthouse26FEB2024.png)
