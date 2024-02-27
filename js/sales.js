@@ -55,64 +55,65 @@ let lima = {
   averageCookiesPerHour: []
 };
 
-document.addEventListener('DOMContentLoaded', function() { // function to call script after DOM loads
-  // Function to simulate cookies purchased
-  function simulateCookiesPurchased(location) {
-    let hours = location.hours.split(', ');
-    let minCustomers = location.minCustomers;
-    let maxCustomers = location.maxCustomers;
-    let avgSale = location.avgSale;
-    hours.forEach(hour => {
-      let customers = getRandomNumberBetween(minCustomers, maxCustomers);
-      let cookiesSold = Math.round(customers * avgSale);
-      location.averageCookiesPerHour.push(cookiesSold);
-    });
-  }
+// Function to simulate cookies purchased
+function simulateCookiesPurchased(location) {
+  let hours = location.hours.split(', ');
+  let minCustomers = location.minCustomers;
+  let maxCustomers = location.maxCustomers;
+  let avgSale = location.avgSale;
+  hours.forEach(hour => {
+    let customers = getRandomNumberBetween(minCustomers, maxCustomers);
+    let cookiesSold = Math.round(customers * avgSale);
+    location.averageCookiesPerHour.push(cookiesSold);
+  });
+}
 
-  // Function to generate random number
-  function getRandomNumberBetween(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
-
-  simulateCookiesPurchased(seattle);
-  simulateCookiesPurchased(tokyo);
-  simulateCookiesPurchased(dubai);
-  simulateCookiesPurchased(paris);
-  simulateCookiesPurchased(lima);
-
-  function displayCookiesPerHour(location) {
-    let containerCookies = document.createElement('section'); // create 'section' for salesData
-    let title = document.createElement('h2');
-    title.textContent = location.name;
-    containerCookies.appendChild(title);
-    let list = document.createElement('ul');
-    let totalCookies = 0;
-
-    location.averageCookiesPerHour.forEach((cookies, index) => {
-      let listItem = document.createElement('li');
-      listItem.textContent = `${location.hours.split(', ')[index]}: ${cookies} cookies`;
-      list.appendChild(listItem);
-      totalCookies += cookies;
-    });
-
-    let totalListItem = document.createElement('li');
-    totalListItem.textContent = `Total Cookies Sold: ${totalCookies}`;
-    list.appendChild(totalListItem);
-
-    containerCookies.appendChild(list);
-
-    // Append the container element to the salesData section
-    document.getElementById('salesData').appendChild(containerCookies);
-  }
-
-  // Display results for each location
-  displayCookiesPerHour(seattle);
-  displayCookiesPerHour(tokyo);
-  displayCookiesPerHour(dubai);
-  displayCookiesPerHour(paris);
-  displayCookiesPerHour(lima);
+// Function to generate random number
+function getRandomNumberBetween(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 
-  // Your JavaScript code here
-  // Call the displayCookiesPerHour function here
-});
+function displayCookiesPerHour(location) {
+  let containerCookies = document.createElement('section'); // create 'section' for salesData
+  let title = document.createElement('h2');
+  title.textContent = location.name;
+  containerCookies.appendChild(title);
+  let list = document.createElement('ul');
+  let totalCookies = 0;
+
+  location.averageCookiesPerHour.forEach((cookies, index) => {
+    let listItem = document.createElement('li');
+    listItem.textContent = `${location.hours.split(', ')[index]}: ${cookies} cookies`;
+    list.appendChild(listItem);
+    totalCookies += cookies;
+  });
+
+  let totalListItem = document.createElement('li');
+  totalListItem.textContent = `Total Cookies Sold: ${totalCookies}`;
+  list.appendChild(totalListItem);
+
+  containerCookies.appendChild(list);
+
+  // Append the container element to the salesData section
+  document.getElementById('salesData').appendChild(containerCookies);
+}
+
+
+simulateCookiesPurchased(seattle);
+simulateCookiesPurchased(tokyo);
+simulateCookiesPurchased(dubai);
+simulateCookiesPurchased(paris);
+simulateCookiesPurchased(lima);
+
+
+// Display results for each location
+displayCookiesPerHour(seattle);
+displayCookiesPerHour(tokyo);
+displayCookiesPerHour(dubai);
+displayCookiesPerHour(paris);
+displayCookiesPerHour(lima);
+
+
+// Your JavaScript code here
+// Call the displayCookiesPerHour function here

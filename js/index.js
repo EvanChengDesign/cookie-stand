@@ -54,54 +54,6 @@ let lima = {
   averageCookiesPerHour: []
 };
 
-// Function to simulate cookies purchased
-function simulateCookiesPurchased(location) {
-  let hours = location.hours.split(', ');
-  let minCustomers = location.minCustomers;
-  let maxCustomers = location.maxCustomers;
-  let avgSale = location.avgSale;
-  hours.forEach(hour => {
-    let customers = getRandomNumberBetween(minCustomers, maxCustomers);
-    let cookiesSold = Math.round(customers * avgSale);
-    location.averageCookiesPerHour.push(cookiesSold);
-  });
-}
-
-// Function to generate random number
-function getRandomNumberBetween(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-simulateCookiesPurchased(seattle);
-simulateCookiesPurchased(tokyo);
-simulateCookiesPurchased(dubai);
-simulateCookiesPurchased(paris);
-simulateCookiesPurchased(lima);
-
-function displayCookiesPerHour(location) {
-  let container = document.createElement('div');
-  let title = document.createElement('h2');
-  title.textContent = location.name;
-  title.classList.add('city-name');
-  container.appendChild(title);
-  let list = document.createElement('ul');
-  let totalCookies = 0; // Variable to store the total cookies sold
-
-  location.averageCookiesPerHour.forEach((cookies, index) => {
-    let listItem = document.createElement('li');
-    listItem.textContent = `${location.hours.split(', ')[index]}: ${cookies} cookies`;
-    list.appendChild(listItem);
-    totalCookies += cookies; // Add the current hour's cookies to the total
-  });
-
-  // Add the total cookies sold as the last item in the list
-  let totalListItem = document.createElement('li');
-  totalListItem.textContent = `Total Cookies Sold: ${totalCookies}`;
-  list.appendChild(totalListItem);
-
-  container.appendChild(list);
-}
-
 // Function to display city info
 function displayCityInfo(location) {
   let containerHome = document.getElementById('displayCityInfo');
@@ -127,16 +79,10 @@ function displayCityInfo(location) {
   // document.body.appendChild(container);
 }
 
-// Display results for each location
-displayCookiesPerHour(seattle);
-displayCookiesPerHour(tokyo);
-displayCookiesPerHour(dubai);
-displayCookiesPerHour(paris);
-displayCookiesPerHour(lima);
-
 // Call the function to display city information list
 displayCityInfo(seattle);
 displayCityInfo(tokyo);
 displayCityInfo(dubai);
 displayCityInfo(paris);
 displayCityInfo(lima);
+
