@@ -45,27 +45,6 @@ header {
     font-style: normal;
   }  
   
-  .city-name {
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem; /* Increase font size for city name */
-    padding-left: 20px; /* Add left padding */
-    margin-bottom: 0.5px; /* Adjust margin bottom to less than 1px */
-  }
-  
-  ul {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 1px;
-    list-style-type: none; /* Remove default list styles */
-    padding-left: 50px; /* Add left padding */
-    margin: 0; /* Reset margin */
-    margin-bottom: 20px;
-  }
-  
-  li {
-    margin-bottom: 2px; /* Reduce space between list items */
-  }
   
 
   footer {

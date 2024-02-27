@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() { // function to call s
   simulateCookiesPurchased(paris);
   simulateCookiesPurchased(lima);
 
-  function displayCookiesPerHour(location) {
+  function displayCookiesPerHour(location) { 
     let containerCookies = document.createElement('section'); // create 'section' for salesData
     let title = document.createElement('h2');
     title.textContent = location.name;
