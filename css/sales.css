@@ -44,43 +44,35 @@ header {
     font-weight: 400;
     font-style: normal;
   }  
-
-  main {
-    margin: 40px;
-  }
   
   .city-name {
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem; /* Increase font size for city name */
-    margin-bottom: 10px; /* Add space below city name */
+    padding-left: 20px; /* Add left padding */
+    margin-bottom: 0.5px; /* Adjust margin bottom to less than 1px */
   }
   
   ul {
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     list-style-type: none; /* Remove default list styles */
-    padding-left: 30px; /* Add left padding */
+    padding-left: 50px; /* Add left padding */
+    margin: 0; /* Reset margin */
+    margin-bottom: 20px;
   }
   
   li {
-    margin-bottom: 5px; /* Add space between list items */
+    margin-bottom: 2px; /* Reduce space between list items */
   }
   
-  .contact-info {
-    color: #888; /* Change color for contact information */
-  }
-  
-  .location {
-    font-style: italic; /* Italicize location information */
-  }
 
   footer {
     margin-top: auto; /* Push footer to the bottom */
     background-color: #a5a5a5;
     color: black;
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     width: 100%;
   }
