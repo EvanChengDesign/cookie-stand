@@ -12,7 +12,8 @@ Lighthouse Score for Lab-001:
 
 ### 27 Feb 2024 | Tuesday  
 
-Establish js functions to cookie
-Lighthouse Score for Lab-001:
+Establish js functions to cookie-stand table data. Added CSS to target selectors and specific portions of the table.  
 
-![Lighthouse Score](./img/Lighthouse26FEB2024.png)
+Lighthouse Score for Lab-002:
+
+![Lighthouse Score](./img/Lighthouse27FEB2024.png)
