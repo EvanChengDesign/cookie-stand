@@ -1,57 +1,55 @@
 header {
-    background-color: #232323;
-    color: #FF8282;
-    font-family: "Righteous", sans-serif;
-    padding: 2%;
-    text-align: center;
-    font-style: italic;
-    font-size: 100%;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav { 
-    background-color: #FF8282;
-    color: black;
-    padding: 10px; /* Add padding for better spacing */
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    display: inline-block; /* Display list items horizontally */
-    margin-right: 10px; /* Add margin between list items */
-  }
-  
-  nav li a {
-    text-decoration: none; /* Remove underline from links */
-    color: black; /* Change link color */
-  }
-  
-  nav li a:hover {
-    color: white;
-  }
+  background-color: #232323;
+  color: #FF8282;
+  font-family: "Righteous", sans-serif;
+  padding: 2%;
+  text-align: center;
+  font-style: italic;
+  font-size: 100%;
+}
 
-  .righteous-regular {
-    font-family: "Righteous", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }  
-  
-  
+body {
+  margin: 0;
+  padding: 0;
+}
 
-  footer {
-    margin-top: auto; /* Push footer to the bottom */
-    background-color: #a5a5a5;
-    color: black;
-    text-align: center;
-    padding: 40px;
-    width: 100%;
-  }
+nav { 
+  background-color: #FF8282;
+  color: black;
+  padding: 10px; 
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+nav li a:hover {
+  color: white;
+}
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}  
+
+footer {
+  margin-top: auto;
+  background-color: #a5a5a5;
+  color: black;
+  text-align: center;
+  padding: 40px;
+  width: 100%;
+}
