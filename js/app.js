@@ -119,7 +119,7 @@ function displayCityInfo(location) {
   let firstHour = location.hours.split(', ')[0];
   let lastHour = location.hours.split(', ')[location.hours.split(', ').length - 1];
   hoursItem.textContent = `Hours Open: ${firstHour}-${lastHour}`;
-  contactInfoItem.textContent = `Contact info: ${location.phone}`;
+  contactInfoItem.textContent = `Contact Info: ${location.phone}`;
   locationItem.textContent = `Location: ${location.location}`;
   list.appendChild(hoursItem);
   list.appendChild(contactInfoItem);

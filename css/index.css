@@ -39,17 +39,73 @@ nav li a:hover {
   color: white;
 }
 
-#logo {
-  display: block;
-  padding: 100px;
-  border: 1px solid black; /* Thin black outline */
+.outer-container {
+  width: 100%; /* Make the container span horizontally 100% of the browser */
+  height: 20%; /* Make the container span vertically 100% of the viewport */
+  border: 1px solid black; /* Add black border */
+  margin-top: 0;
   box-sizing: border-box; /* Include border in element's total width */
+  display: flex; /* Use flexbox to center the logo-container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
+
+.logo-container {
+  width: 80%; /* Set width to 80% of the outer-container */
+  height: 80%; /* Set height to 80% of the outer-container */
+  max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
+  max-height: 100%; /* Ensure the container doesn't exceed its parent's height */
+  box-sizing: border-box; /* Include padding in element's total width */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 10px; /* Adjust the padding */
+}
+
+
+#logo {
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+}
+
 
 .righteous-regular {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+#displayCityInfo {
+  margin: 40px 20px; /* 40px margin at the top and bottom, 20px margin on the left and right */
+}
+
+.city-name {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem; /* Increase font size for city name */
+  margin-bottom: 10px; /* Add space below city name */
+  margin-left: 20px; /* Add 20px margin to the left */
+}
+
+
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  list-style-type: none; /* Remove default list styles */
+  padding-left: 4%; /* Remove default padding */
+}
+
+li {
+  margin-bottom: 5px; /* Add space between list items */
+}
+
+.contact-info {
+  color: #888; /* Change color for contact information */
+}
+
+.location {
+  font-style: italic; /* Italicize location information */
 }
 
 footer {
