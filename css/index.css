@@ -78,33 +78,33 @@ nav li a:hover {
 #displayCityInfo {
   margin: 40px;
 }
-.city-name {
+
+#displayCityInfo h2 {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem; /* Increase font size for city name */
-  margin-bottom: 10px; /* Add space below city name */
-  padding-left: 2%;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-ul {
+#displayCityInfo ul {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
-  list-style-type: none; /* Remove default list styles */
-  padding-left: 3%; /* Remove default padding */
+  list-style-type: none;
+  padding-left: 3%;
   padding-bottom: 10px;
 }
 
-li {
-  margin-bottom: 5px; /* Add space between list items */
+#displayCityInfo li {
+  margin-bottom: 5px;
 }
 
-.contact-info {
-  color: #888; /* Change color for contact information */
+#displayCityInfo .contact-info {
+  color: #888;
 }
 
-.location {
-  font-style: italic; /* Italicize location information */
+#displayCityInfo .location {
+  font-style: italic;
 }
 
 footer {

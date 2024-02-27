@@ -27,6 +27,7 @@ nav ul {
 
 nav li {
   display: inline-block;
+  padding: 2px;
   margin-right: 10px;
 }
 
@@ -44,6 +45,36 @@ nav li a:hover {
   font-weight: 400;
   font-style: normal;
 }  
+
+#salesData section {
+  margin-bottom: 20px;
+  padding: 10px;
+  margin: 20px 10px;
+}
+
+#salesData h2 {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 10px;
+  padding-left: 1%;
+  color: #333;
+}
+
+#salesData ul {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+  padding-left: 2%;
+  margin: none;
+}
+
+#salesData li {
+  margin: 4px;
+  letter-spacing: 1px;
+}
+
+
 
 footer {
   margin-top: auto;
