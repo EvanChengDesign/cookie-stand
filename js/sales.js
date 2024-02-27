@@ -28,13 +28,16 @@ CookieStand.prototype.render = function() {
   let tableRow = document.createElement('tr');
   let rowData = [this.name, ...this.averageCookiesPerHour, this.calculateDailyTotal()];
 
-  rowData.forEach(data => {
+  rowData.forEach((data, index) => {
     let cell = document.createElement('td');
     cell.textContent = data;
+    if (index === 0) { // Check if it's the location name cell
+      cell.classList.add('location-name'); // Add the class to target the location name
+    }
     tableRow.appendChild(cell);
   });
 
-  document.getElementById('cookieTable').appendChild(tableRow);
+  document.getElementById('cookieSalesTable').appendChild(tableRow);
 };
 
 // Method to calculate daily total cookies for a location
@@ -50,21 +53,33 @@ function getRandomNumberBetween(min, max) {
 // Function to create header row
 function createHeaderRow() {
   let tableHeaderRow = document.createElement('tr');
-  let headerData = ['Location', ...Array.from({length: 14}, (_, i) => `${i+6}:00am`), 'Daily Location Total'];
+  let headerData = ['Locations'];
 
+  // Loop to generate header data for each hour
+  for (let i = 6; i <= 19; i++) {
+    let hour = i % 12; // Convert to 12-hour format
+    let period = i < 12 ? 'am' : 'pm'; // Determine period (am/pm)
+    if (hour === 0) hour = 12; // Convert 0 to 12 for 12am
+    headerData.push(`${hour}${period}`);
+  }
+
+  headerData.push('Location Totals');
+
+  // Create table header cells
   headerData.forEach(data => {
     let headerCell = document.createElement('th');
     headerCell.textContent = data;
     tableHeaderRow.appendChild(headerCell);
   });
 
-  document.getElementById('cookieTable').appendChild(tableHeaderRow);
+  // Append the header row to the table
+  document.getElementById('cookieSalesTable').appendChild(tableHeaderRow);
 }
 
 // Function to create footer row
 function createFooterRow(locations) {
-  let tableFooterRow = document.createElement('tr');
-  let footerData = ['Totals'];
+  let tableFooterRow = document.createElement('tfoot');
+  let footerData = ['Hourly Totals for All Locations'];
 
   // Calculate hourly totals across all stores
   for (let i = 1; i <= 14; i++) {
@@ -82,7 +97,19 @@ function createFooterRow(locations) {
     tableFooterRow.appendChild(footerCell);
   });
 
-  document.getElementById('cookieTable').appendChild(tableFooterRow);
+  document.getElementById('cookieSalesTable').appendChild(tableFooterRow);
+}
+
+// Function to create location totals column
+function createLocationTotalsColumn(locations) {
+  let tableRows = document.querySelectorAll('#cookieSalesTable tbody tr');
+
+  tableRows.forEach((row, index) => {
+    let locationTotal = locations[index].calculateDailyTotal();
+    let totalCell = document.createElement('td');
+    totalCell.textContent = locationTotal;
+    row.appendChild(totalCell);
+  });
 }
 
 // Create instances for each cookie stand location
@@ -111,3 +138,6 @@ lima.render();
 
 // Create table footer
 createFooterRow([seattle, tokyo, dubai, paris, lima]);
+
+// Create location totals column
+createLocationTotalsColumn([seattle, tokyo, dubai, paris, lima]);

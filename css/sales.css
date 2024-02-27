@@ -1,22 +1,19 @@
+/* Header styles */
 header {
   background-color: #232323;
   color: salmon;
   font-family: "Righteous", sans-serif;
-  padding: 2%;
+  padding: 2rem;
   text-align: center;
   font-style: italic;
   font-size: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-nav { 
+/* Navigation styles */
+nav {
   background-color: salmon;
   color: black;
-  padding: 10px; 
+  padding: 1rem;
 }
 
 nav ul {
@@ -27,8 +24,8 @@ nav ul {
 
 nav li {
   display: inline-block;
-  padding: 2px;
-  margin-right: 10px;
+  padding: 0.5rem;
+  margin-right: 1rem;
 }
 
 nav li a {
@@ -40,47 +37,101 @@ nav li a:hover {
   color: white;
 }
 
-.righteous-regular {
-  font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}  
-
-#salesData section {
-  margin-bottom: 20px;
-  padding: 10px;
-  margin: 20px 10px;
+/* Table section styles */
+#cookieSales section {
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
-#salesData h2 {
+#cookieSales h2 {
   font-family: "Righteous", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   font-style: normal;
-  margin-bottom: 10px;
-  padding-left: 1%;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
   color: #333;
 }
 
-#salesData ul {
+#cookieSales ul {
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  padding-left: 2%;
-  margin: none;
+  padding-left: 1rem;
+  margin: 0;
 }
 
-#salesData li {
-  margin: 4px;
+#cookieSales li {
+  margin: 0.5rem;
   letter-spacing: 1px;
 }
 
+/* Table styles */
+#cookieSalesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
 
+#cookieSalesTable th {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: grey;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
 
+}
+
+#cookieSalesTable tr {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  background-color: salmon;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+
+}
+
+#cookieSalesTable td {
+  padding: 1rem;
+  border: 1px solid black;
+
+}
+
+#cookieSalesTable td.location-name {
+  text-align: left;
+}
+
+/* Targeting "Hourly Totals" footer row */
+#cookieSalesTable tfoot {
+  font-weight: bold;
+  background-color: gray;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+/* #cookieSalesTable tfoot td {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 0.8rem;
+} */
+
+/* Targeting "Location Total" cells */
+#cookieSalesTable tbody tr:last-child td:last-child {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+/* Footer styles */
 footer {
   margin-top: auto;
-  background-color: #a5a5a5;
+  background-color: #b1b1b1;
   color: black;
   text-align: center;
-  padding: 40px;
+  padding: 2rem;
   width: 100%;
 }
