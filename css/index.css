@@ -76,24 +76,22 @@ nav li a:hover {
 }
 
 #displayCityInfo {
-  margin: 40px 20px; /* 40px margin at the top and bottom, 20px margin on the left and right */
+  margin: 40px;
 }
-
 .city-name {
   font-family: "Righteous", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem; /* Increase font size for city name */
   margin-bottom: 10px; /* Add space below city name */
-  margin-left: 20px; /* Add 20px margin to the left */
+  padding-left: 2%;
 }
-
 
 ul {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 1px;
   list-style-type: none; /* Remove default list styles */
-  padding-left: 4%; /* Remove default padding */
+  padding-left: 3%; /* Remove default padding */
 }
 
 li {
