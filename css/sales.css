@@ -68,7 +68,7 @@ main {
 }
 
 /* Styles for table data cells except the footer cells */
-#cookieSalesTable tbody td:not(:last-child) {
+#cookieSalesTable tr td:not(:last-child) {
   background-color: salmon;
   border: 1px solid black;
   font-family: Arial, Helvetica, sans-serif;
@@ -96,10 +96,14 @@ main {
 
 /* Styles for the footer */
 footer {
+
   background-color: #b1b1b1;
   color: black;
   margin-top: auto;
   padding: 2rem;
+  position: fixed;
+  bottom: 0; 
+  width: 100%; 
   text-align: center;
   width: 100%;
 }
