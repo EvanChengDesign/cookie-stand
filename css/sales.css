@@ -35,7 +35,9 @@ nav li a:hover {
   color: white;
 }
 
-
+#cookieSales {
+  margin: 1rem;
+}
 #cookieSales h2 {
   font-family: "Righteous", sans-serif;
   font-size: 1.5rem;
@@ -58,11 +60,52 @@ nav li a:hover {
   letter-spacing: 1px;
 }
 
+
+.location-name {
+  text-align: left;
+
+}
+
 #cookieSalesTable {
-  margin: 1rem;
+  margin: 0 auto; /* This centers the table horizontally */
   width: 100%;
   border-collapse: collapse;
 }
+
+/* Targeting header cells */
+#cookieSalesTable th {
+  color: white;
+  background-color: grey;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  /* Add any other styles as needed */
+}
+
+/* Targeting data cells */
+#cookieSalesTable td {
+  /* Styles for table data cells */
+  padding: 1rem;
+  border: 1px solid black;
+  /* Add any other styles as needed */
+}
+#cookieSalesTable td:last-child {
+  background-color: grey;
+  color: white;
+
+}
+/* Targeting footer cells */
+#cookieSalesTable tfoot {
+  /* Styles for table footer */
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+
+}
+
 
 #cookieSalesTable th {
   font-family: Arial, Helvetica, sans-serif;
@@ -96,15 +139,6 @@ nav li a:hover {
   text-align: left;
 }
 
-/* Targeting "Hourly Totals" footer row */
-#cookieSalesTable tfoot {
-  font-weight: bold;
-  background-color: gray;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  padding: 0.8rem;
-}
 
 footer {
   margin-top: auto;
