@@ -1,22 +1,31 @@
+/* Styles for the header */
 header {
   background-color: #232323;
   color: salmon;
   font-family: "Righteous", sans-serif;
+  font-size: 100%;
+  font-style: italic;
   padding: 2%;
   text-align: center;
-  font-style: italic;
-  font-size: 100%;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensure main takes up the full height of the viewport */
 }
 
+/* Styles for the body */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Styles for the navigation */
 nav { 
   background-color: salmon;
   color: black;
-  padding: 10px; /* Add padding for better spacing */
+  padding: 1rem;
 }
 
 nav ul {
@@ -26,64 +35,67 @@ nav ul {
 }
 
 nav li {
-  display: inline-block; /* Display list items horizontally */
-  margin-right: 10px; /* Add margin between list items */
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 nav li a {
-  text-decoration: none; /* Remove underline from links */
-  color: black; /* Change link color */
+  color: black;
+  text-decoration: none;
 }
 
 nav li a:hover {
   color: white;
 }
 
+/* Styles for the outer container */
 .outer-container {
-  width: 100%; /* Make the container span horizontally 100% of the browser */
-  height: 20%; /* Make the container span vertically 100% of the viewport */
-  border: 1px solid black; /* Add black border */
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  height: 20rem;
+  justify-content: center;
   margin-top: 0;
-  box-sizing: border-box; /* Include border in element's total width */
-  display: flex; /* Use flexbox to center the logo-container */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  width: 100%;
 }
 
+/* Styles for the logo container */
 .logo-container {
-  width: 80%; /* Set width to 80% of the outer-container */
-  height: 80%; /* Set height to 80% of the outer-container */
-  max-width: 100%; /* Ensure the container doesn't exceed its parent's width */
-  max-height: 100%; /* Ensure the container doesn't exceed its parent's height */
-  box-sizing: border-box; /* Include padding in element's total width */
-  display: flex; /* Use flexbox to center the content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  padding: 10px; /* Adjust the padding */
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  padding: 1rem;
+  width: 80%;
 }
 
-
+/* Styles for the logo */
 #logo {
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-  max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+  max-height: 100%;
+  max-width: 100%;
 }
 
-
+/* Styles for the righteous regular font */
 .righteous-regular {
   font-family: "Righteous", sans-serif;
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
 }
 
+/* Styles for the #displayCityInfo section */
 #displayCityInfo {
-  margin: 40px;
+  margin-top: 2rem; /* Pushes it to the top of the remaining space */
+  margin-bottom: 2rem; /* Add some space between #displayCityInfo and footer */
+  padding: 0 2rem; /* Adjust padding as needed */
 }
 
 #displayCityInfo h2 {
   font-family: "Righteous", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -107,11 +119,11 @@ nav li a:hover {
   font-style: italic;
 }
 
+/* Styles for the footer */
+/* Styles for the footer */
 footer {
-  margin-top: auto; /* Push footer to the bottom */
-  background-color: #a5a5a5;
+  background-color: #b1b1b1;
   color: black;
+  padding: 2rem;
   text-align: center;
-  padding: 40px;
-  width: 100%;
 }
