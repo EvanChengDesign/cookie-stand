@@ -55,16 +55,22 @@ function createHeaderRow() {
   let tableHeaderRow = document.createElement('tr');
   let headerData = ['Locations'];
 
-  // Loop to generate header data for each hour
+  // Loop to generate hour in header, and then convert to 12-hour format
   for (let i = 6; i <= 19; i++) {
     let hour = i % 12; // Convert to 12-hour format
-    let period = i < 12 ? 'am' : 'pm'; // Determine period (am/pm)
-    if (hour === 0) hour = 12; // Convert 0 to 12 for 12am
+    let period;
+    if (i < 12) {
+      period = 'am'; // Determine period (am/pm)
+    } else {
+      period = 'pm';
+    }
+    if (hour === 0) {
+      hour = 12; // Convert 0 to 12 for 12am
+    }
     headerData.push(`${hour}${period}`);
   }
 
   headerData.push('Location Totals');
-
   // Create table header cells
   headerData.forEach(data => {
     let headerCell = document.createElement('th');
