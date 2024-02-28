@@ -67,7 +67,7 @@ main {
   text-align: center;
 }
 
-/* Styles for table data cells */
+/* Styles for table data cells except the footer cells */
 #cookieSalesTable tbody td:not(:last-child) {
   background-color: salmon;
   border: 1px solid black;
@@ -76,7 +76,7 @@ main {
   padding: 1rem;
 }
 
-/* Styles for table footer cells */
+/* Styles for table footer cells only */
 #cookieSalesTable tfoot td {
   background-color: grey;
   color: white;
