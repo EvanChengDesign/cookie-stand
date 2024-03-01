@@ -37,10 +37,54 @@ nav li a:hover {
   color: white;
 }
 
-/* Flex container for the main content */
+/* Adjust the main container to align items in a column */
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* This ensures that the addRow section comes above the cookieSales section */
+  align-items: center; /* Keeps items centered */
+  justify-content: flex-start; /* Aligns content to the start of the main axis */
+}
+
+/* Styles for the table */
+table {
+  align-content: center;
+}
+
+/* Styles for table header */
+#table-container th {
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/* Styles for table data cells except the footer cells */
+#table-container td:not(:last-child) {
+  background-color: salmon;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+/* Styles for table footer cells only */
+#table-container tfoot td {
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+/* Targeting the last column for location totals */
+#table-container td:last-child {
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Flex item for the cookieSales section */
@@ -51,59 +95,78 @@ main {
   margin: 1rem;
 }
 
-/* Styles for the table */
-#cookieSalesTable {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-/* Styles for table header */
-#cookieSalesTable th {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-/* Styles for table data cells except the footer cells */
-#cookieSalesTable tr td:not(:last-child) {
-  background-color: salmon;
-  border: 1px solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-/* Styles for table footer cells only */
-#cookieSalesTable tfoot td {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-/* Targeting the last column for location totals */
-#cookieSalesTable td:last-child {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-
 /* Styles for the footer */
 footer {
-
   background-color: #b1b1b1;
   color: black;
-  margin-top: auto;
   padding: 2rem;
   position: fixed;
-  bottom: 0; 
-  width: 100%; 
-  text-align: center;
+  bottom: 0;
   width: 100%;
+  text-align: center;
+}
+
+/* Styles for the form */
+#new-store-form {
+  margin: 1rem;
+}
+
+/* Styles for the form fieldset */
+#new-store-form fieldset {
+  border: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Styles for the form legend */
+#new-store-form legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for the form rows */
+#new-store-form .form-row {
+  margin-bottom: 1rem;
+}
+
+/* Styles for the form labels */
+#new-store-form label {
+  display: block;
+  font-weight: bold;
+}
+
+/* Styles for the form inputs */
+#new-store-form input[type="text"],
+#new-store-form input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Styles for the form button */
+#new-store-form button[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: salmon;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Styles for the table container */
+#table-container {
+  margin: 1rem;
+}
+
+/* Styles for the new IDs used in JavaScript */
+#table-container table {
+  margin-top: 1rem;
+}
+
+.grey-column {
+  background-color: grey;
+  color: white;
 }

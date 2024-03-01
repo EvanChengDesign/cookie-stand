@@ -11,21 +11,36 @@
     <link rel="stylesheet" href="../css/sales.css">
 </head>
 <body>
-<header>
-    <h1>Welcome to Pat's Salmon Cookies</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sales.html">Sales Data</a></li>
-    </ul>
-</nav>
-<main>
-    <section id="cookieSales">
-        <table id="cookieSalesTable"></table>
-    </section> 
-</main>
-<footer>&copy; 2023 Pat's Salmon Cookies</footer>
-<script src="../js/sales.js"></script>
+  <header>Welcome to Pat's Salmon Cookies!</header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sales.html">Sales Data</a>
+  </nav>
+  <main>
+    <form id="new-store-form">
+    <fieldset>
+        <legend>Add A New Store To The Table!</legend>
+        <div class="form-row">
+        <label for="store-name">Location Name</label>
+        <input type="text" id="store-name" name="store-name" required>
+        </div>
+        <div class="form-row">
+        <label for="min-customers">Minimum Customers Per Hour</label>
+        <input type="number" id="min-customers" name="min-customers" required>
+        </div>
+        <div class="form-row">
+        <label for="max-customers">Maximum Customers Per Hour</label>
+        <input type="number" id="max-customers" name="max-customers" required>
+        </div>
+        <div class="form-row">
+        <label for="avg-sale">Average Sales</label>
+        <input type="number" id="avg-sale" name="avg-sale" step="0.01" required>
+        </div>
+        <button type="submit">Click Here To Add!</button>
+    </fieldset>
+    </form>
+  </main>
+  <script src="../js/sales.js"></script>
 </body>
+<footer>&copy; 2023 Pat's Salmon Cookies</footer>
 </html>
