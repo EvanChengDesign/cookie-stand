@@ -23,3 +23,9 @@ Lighthouse Score for Lab-002:
 Made changes to CSS in the sales css in order to target specific sections of the table. Also revised the css in both index and sales to organize properties and develop consistency across sizing use (rems).
 
 ![Lighthouse Score](./img/Lighthouse28FEB2024.png)  
+
+### 1 MAR 2024 | Friday
+
+Made changes to CSS in the sales css in order to target specific sections of the table. Added JS functions to add new row to table and calculate totals.
+
+![Lighthouse Score](./img/Lighthouse1MAR2024.png)  
