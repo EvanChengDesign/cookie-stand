@@ -31,6 +31,10 @@ nav a {
 
 }
 
+nav li a:hover {
+  color: white;
+}
+
 ul {
   list-style-type: none;
   margin-left: 40px;
@@ -41,6 +45,8 @@ li {
   margin-bottom: 5px;
   font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
+
 
 .city-name {
   font-family: "Righteous", sans-serif;
