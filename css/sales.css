@@ -23,6 +23,7 @@ nav {
 }
 
 nav a {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px;
   margin-right: 20px;
   text-decoration: none;
