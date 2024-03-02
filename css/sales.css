@@ -1,172 +1,175 @@
-/* Flex item for the header */
-header {
-  background-color: #232323;
-  color: salmon;
+.righteous-regular {
   font-family: "Righteous", sans-serif;
-  font-size: 100%;
-  font-style: italic;
-  padding: 2rem;
-  text-align: center;
+  font-weight: 400;
 }
 
-/* Flex item for the nav */
+
+header {
+  background-color: black;
+  padding: 50px;
+  color: salmon;
+  font-style: italic;
+  text-align: center;
+  font-size: 3.5em;
+  font-family: "Righteous", sans-serif;
+  width: 100%;
+
+}
+
 nav {
   background-color: salmon;
-  color: black;
-  padding: 1rem;
+  padding: 12px;
+  width: 100%;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 1rem;
-  padding: 0.5rem;
-}
-
-nav li a {
-  color: black;
+nav a {
+  padding: 10px;
+  margin-right: 20px;
   text-decoration: none;
-}
-
-nav li a:hover {
-  color: white;
-}
-
-/* Adjust the main container to align items in a column */
-main {
-  display: flex;
-  flex-direction: column; /* This ensures that the addRow section comes above the cookieSales section */
-  align-items: center; /* Keeps items centered */
-  justify-content: flex-start; /* Aligns content to the start of the main axis */
-}
-
-/* Styles for the table */
-table {
-  align-content: center;
-}
-
-/* Styles for table header */
-#table-container th {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 0.8rem;
-  text-align: center;
-}
-
-/* Styles for table data cells except the footer cells */
-#table-container td:not(:last-child) {
-  background-color: salmon;
-  border: 1px solid black;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-/* Styles for table footer cells only */
-#table-container tfoot td {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 1rem;
-}
-
-/* Targeting the last column for location totals */
-#table-container td:last-child {
-  background-color: grey;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Flex item for the cookieSales section */
-#cookieSales {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
-
-/* Styles for the footer */
-footer {
-  background-color: #b1b1b1;
   color: black;
-  padding: 2rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.city-name {
+  font-family: "Righteous", sans-serif;
+  font-size: 2em;
+  margin-bottom: 2px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+footer {
   text-align: center;
+  background-color: lightgray;
+  padding: 50px;
+  margin-top: 20px;
 }
 
-/* Styles for the form */
-#new-store-form {
-  margin: 1rem;
+main {
+  padding: 20px;
 }
 
-/* Styles for the form fieldset */
-#new-store-form fieldset {
+/* styles.css */
+
+/* Style for the table */
+table {
+  width: 75%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the table horizontally */
+  border-collapse: collapse;
+  background-color: salmon; /* Set the background color of the table body */
+}
+
+/* Style for table header and body */
+td, th {
   border: 1px solid black;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Styles for the form legend */
-#new-store-form legend {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-/* Styles for the form rows */
-#new-store-form .form-row {
-  margin-bottom: 1rem;
-}
-
-/* Styles for the form labels */
-#new-store-form label {
-  display: block;
+  padding: 8px;
+  text-align: center;
   font-weight: bold;
 }
 
-/* Styles for the form inputs */
-#new-store-form input[type="text"],
-#new-store-form input[type="number"] {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-/* Styles for the form button */
-#new-store-form button[type="submit"] {
-  padding: 0.5rem 1rem;
-  background-color: salmon;
-  color: white;
+/* Style for header row */
+thead th {
+  background-color: grey;
+  color: white; /* Set the text color */
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
 }
 
-/* Styles for the table container */
-#table-container {
-  margin: 1rem;
+/* Style for footer row */
+tfoot {
+  background-color: grey; /* Change color as desired */
+  color: white;
 }
 
-/* Styles for the new IDs used in JavaScript */
-#table-container table {
-  margin-top: 1rem;
+tfoot th {
+  padding: 8px;
 }
 
-.grey-column {
+tfoot td {
+  border: none; /* Remove border for footer cells */
+  padding: 8px;
+}
+
+/* Style for Location Totals column */
+.location-totals {
   background-color: grey;
   color: white;
+}
+
+/* Style for store names */
+.city-name {
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Style for top row */
+tr:first-child th {
+  background-color: grey;
+}
+
+/* Style for bottom row */
+tr:last-child th {
+  background-color: grey;
+}
+
+/* Style for the last column cells */
+td:last-child,
+th:last-child {
+  background-color: grey; /* Grey color */
+  border: none;
+  color: white;
+}
+
+/* Style for city name cells */
+td:first-child {
+  text-align: left; /* Align text to the left */
+}
+
+form fieldset {
+  border: 2px solid black; /* Add border around the fieldset */
+  padding: 20px; /* Add padding inside the fieldset */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Evenly space items in the row */
+  align-items: center;
+  margin-bottom: 10px; /* Add spacing between rows */
+}
+
+label {
+  margin-right: 10px;
+}
+
+.form-row label {
+  flex: 1; /* Distribute available space evenly among labels */
+  text-align: center; /* Center-align labels */
+}
+
+.form-row input {
+  flex: 1; /* Take up remaining space */
+}
+
+form button {
+  align-self: flex-start; /* Align button to the start of the row */
+}
+
+form legend {
+  font-family: "Righteous", sans-serif;
+  color: salmon;
+  text-align: left; /* Center-align the legend */
+  margin-bottom: 10px; /* Add spacing below the legend */
 }
